@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overstock</title>
+    <link rel="shortcut icon" href="/download.jpg">
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        #nav {
+            width: 100%;
+            height: 30px;
+
+            display: flex;
+            background-color: rgb(249, 250, 251);
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+        }
+
+        #nav>div:first-child {
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            color: #94979b;
+            font-size: 12px;
+            margin-top: 7px;
+
+
+        }
+
+        #nav>div>img {
+            width: 80%;
+            border-radius: 138px;
+            margin-bottom: 2px;
+
+        }
+
+        #nav>div:nth-child(3) {
+            margin-left: -3px;
+            margin-top: 4px;
+
+        }
+
+        #searchbar {
+            width: 100%;
+            height: 87px;
+
+            display: flex;
+        }
+
+        .img1 {
+            width: 17%;
+            margin-top: 18px;
+            margin-left: 16px;
+
+        }
+
+        #searchbar>div>h1 {
+            margin-left: -160px;
+            margin-top: 15px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        #searchbar>div>input {
+            width: 737%;
+            height: 28px;
+            margin-top: 20px;
+            border: 1px solid #dadcdf;
+            border-radius: 4px 0 0 4px;
+
+        }
+
+        .img2 {
+            margin-left: 866px;
+            height: 37%;
+            margin-top: 17px;
+            width: 46px;
+            cursor: pointer;
+        }
+
+        .img3 {
+            width: 17%;
+            margin-left: 30px;
+            margin-top: 17px;
+            cursor: pointer;
+        }
+
+        .p1 {
+            margin-left: 20px;
+            cursor: pointer;
+
+        }
+
+        .p1>a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .img4 {
+            width: 35%;
+            margin-top: 17px;
+
+            margin-left: -50px;
+            cursor: pointer;
+        }
+
+        .p2 {
+            margin-left: -49px;
+            cursor: pointer;
+
+        }
+
+        .img5 {
+            width: 32px;
+            margin-top: 14px;
+            margin-left: -66px;
+            cursor: pointer;
+
+
+        }
+
+        .p3 {
+            margin-left: -61px;
+            cursor: pointer;
+
+        }
+
+        #list {
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            display: flex;
+            width: 100%;
+            height: 47px;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        #list>div {
+            margin: auto;
+        }
+
+        #list>div:nth-child(12) {
+            color: red;
+        }
+
+        #form {
+
+            /* display: flex; */
+            display: block;
+            background-color: #ffffff;
+            width: 40%;
+            height: 500px;
+            margin: auto;
+            margin-top: 20px;
+
+        }
+
+        #border {
+            border: 1px solid black;
+            width: 55%;
+            margin-top: 37px;
+            color: #626669;
+            background-color: #dadcdf;
+            border: none;
+
+        }
+
+        .para1 {
+            margin-top: 20px;
+            color: #626669;
+        }
+
+        #email {
+            margin-top: 10px;
+            color: #626669;
+
+        }
+
+        .para2 {
+            margin-top: 20px;
+            color: #626669;
+        }
+
+        #pwd {
+            margin-top: 10px;
+            color: #626669;
+        }
+
+        .para3 {
+            text-align: center;
+            margin-top: -50px;
+            color: #626669;
+        }
+
+        #pwd2 {
+            margin-left: 242px;
+            margin-top: 15px;
+            color: #626669;
+
+        }
+
+        #btn {
+            margin-top: 44px;
+            width: 40%;
+            height: 40px;
+            border: none;
+            background-color: #0272a2;
+            color: white;
+        }
+
+        .form>hr {
+
+            margin-top: 48px;
+            width: 56%;
+            color: #fff;
+        }
+
+
+        #btn2 {
+            margin-top: 40px;
+            margin-top: 40px;
+            width: 40%;
+            height: 40px;
+            border: none;
+            color:
+                #2f3337
+        }
+
+        #login {
+            display: flex;
+
+            width: 40%;
+            height: 400px;
+            margin: auto;
+            margin-right: 11px;
+            margin-top: -502px;
+        }
+
+
+        .p369 {
+            margin-top: 16px;
+        }
+
+
+
+        #mailing {
+            margin-top: 12px;
+            width: 125%;
+            height: 28px;
+        }
+
+        .p376 {
+            margin-top: 20px;
+
+        }
+
+        #pwd384 {
+            margin-top: 14px;
+            width: 125%;
+            height: 28px;
+        }
+
+        #btn3 {
+            margin-top: 20px;
+            width: 132%;
+            height: 40px;
+            border: none;
+            background-color: #27865f;
+            color: white;
+
+
+        }
+
+        hr{
+            width: 54%;
+margin-top: 39px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div id="nav">
+        <div>Ships to:</div>
+        <div>
+            <img src="	https://ak1.ostkcdn.com/img/mxc/intFlag_IN.gif" alt="Indian Flag">
+        </div>
+        <div>INDIA</div>
+
+    </div>
+
+    <div id="searchbar">
+        <div>
+            <img class="img1" src="https://media.glassdoor.com/sqll/14907/overstock-com-squarelogo-1529535998697.png"
+                alt="logo">
+        </div>
+        <div>
+            <h1>overstock</h1>.
+        </div>
+        <div>
+            <input type="text" placeholder="Search">
+        </div>
+        <div>
+            <img class="img2"
+                src="https://lh3.googleusercontent.com/pI4LpPsucOyakRwhmOF_te2ijufLrpNx2pvNwa1KrBYrQ9U8JzD5SOqM5A-bwCQCo0xJsNSoJs04FhOo8tY9nuYQKKY=w128-h128-e365-rj-sc0x00ffffff"
+                alt="logo">
+
+        </div>
+        <div>
+
+            <img class="img3" src="https://cdn-icons-png.flaticon.com/128/747/747376.png" alt="logo2">
+
+            <p class="p1"><a href="signup.html">Account</a></p>
+
+        </div>
+        <div>
+            <img class="img4" src="https://cdn-icons-png.flaticon.com/128/535/535285.png" alt="">
+            <p class="p2">Lists</p>
+        </div>
+        <div>
+            <img class="img5" src="https://cdn-icons-png.flaticon.com/128/891/891407.png" alt="cart">
+            <p class="p3">Cart</p>
+        </div>
+
+    </div>
+
+
+    <div id="list">
+        <div>
+            <p>Furniture</p>
+        </div>
+        <div>
+            <p>Rugs</p>
+        </div>
+        <div>
+            <p>Decor</p>
+        </div>
+        <div>
+            <p>Bedding</p>
+        </div>
+        <div>
+            <p>Home Improvement</p>
+        </div>
+        <div>
+            <p>Kitchen</p>
+        </div>
+        <div>
+            <p>Outdoor</p>
+        </div>
+        <div>
+            <p>Lighting</p>
+        </div>
+        <div>
+            <p>Kids & Baby</p>
+        </div>
+        <div>
+            <p>More</p>
+        </div>
+        <div>
+            <p>|</p>
+        </div>
+        <div>
+            <p>Sales & Ideas</p>
+        </div>
+    </div>
+
+
+    <div id="form">
+        <div class="form">
+
+            <h3>Create Account</h3>
+            <p class="para1">Email Adress*</p>
+            <form>
+                <input id="email" type="email" placeholder="Email">
+                <p class="para2">Password*</p>
+                <input id="pwd" type="password" placeholder="Password">
+                <p class="para3">Confirm Password*</p>
+                <input type="password" id="pwd2" placeholder="Confirm Password">
+                <p id="border"><input type="checkbox"> Sign up today for exclusive offers from Overstock.com delivered
+                    right to your inbox**</p>
+                <button id="btn">Create Account</button>
+                <hr>
+                <button id="btn2">Continue as Guest</button>
+        </div>
+        </form>
+
+
+    </div>
+
+
+
+
+    <div id="login">
+        <div class="form2">
+            <h3>Sign In</h3>
+
+            <p class="p369">Email Adress*</p>
+            <form >
+                <input id="mailing" type="text" placeholder="Email">
+                <p class="p376">Password*</p>
+                <input id="pwd384" type="password" placeholder="Password"><br>
+                <button id="btn3">Sign In</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+</html>
+
+
+<script>
+    let form = document.querySelector("form");
+    let userData = JSON.parse(localStorage.getItem("userData")) || [];
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        let data = {
+            email: form.email.value,
+            password: form.pwd.value,
+            confirmpassword: form.pwd2.value,
+
+
+
+
+
+
+        }
+    
+
+        if (checkemails(data.email) === true) {
+            userData.push(data);
+            localStorage.setItem("userData", JSON.stringify(userData));
+
+
+        }
+        else {
+            alert("Account already Exists")
+        }
+
+    })
+
+    function checkemails(email) {
+        let filtered = userData.filter(function (element) {
+            return email === element.email;
+
+        })
+
+        if (filtered.length > 0) {
+            return false;
+        }
+        else {
+            return true;
+        }
+
+    }
+
+
+    let form2=document.querySelector("form");
+    let user=JSON.parse(localStorage.getItem("user"))||[];
+    form.addEventListener("submit",function(e){
+        e.preventDefault()
+
+  let data2={
+    email:form2.mailing.value,
+    password:form.pwd384.value,
+
+  }
+  
+  if(checksignin(data2.email,data2.password)===true){
+    localStorage.setItem("signin",JSON.stringify(data2));
+    alert("Sign in Sucessful")
+  }
+  else{
+    alert("Wrong username or Password");
+  }
+
+
+
+    })
+
+    function checksignin(email,password){
+        let filter=user.filter(function(element){
+            return element.email===email &&  element.password===password;
+
+
+        })
+        if(filter.length>0) {
+            return true;
+        }
+        else{
+            return false;
+        }
+
+    }
+
+
+
+</script>
